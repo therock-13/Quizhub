@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-icon">📚</span>
+        <h1>Quiz Library</h1>
+      </div>
+      <p class="tagline">Ready-made quizzes • Click & start learning</p>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <section class="controls">
+        <div class="search-box">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+          <input type="text" id="searchInput" placeholder="Search quizzes by title..." aria-label="Search quizzes">
+        </div>
+        <div class="filters">
+          <select id="categoryFilter" aria-label="Filter by category">
+            <option value="">All Categories</option>
+          </select>
+          <select id="levelFilter" aria-label="Filter by level">
+            <option value="">All Levels</option>
+          </select>
+        </div>
+      </section>
+
+      <p class="quiz-count" id="quizCount">Loading quizzes...</p>
+
+      <section class="quiz-grid" id="quizGrid"></section>
+
+      <div class="empty-state" id="emptyState" hidden>
+        <div class="empty-icon">🔍</div>
+        <h2>No quizzes found</h2>
+        <p>Try changing your search or filters.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Quiz Library • Hosted on GitHub Pages • Add your own quizzes easily</p>
+    </div>
+  </footer>
+
+  <script src="js/quizzes.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
